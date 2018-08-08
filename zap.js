@@ -98,33 +98,33 @@ function triggerEventOnPage(selector, eventName, memo) {
   document.body.removeChild(el);
 }
 
-/////////////cria botao
+///////////// creates button
 function addActivateBtn() {
   var body = document.getElementsByTagName("body")[0];
   var startBtnDiv = document.createElement("div");
-  startBtnDiv.innerHTML = '<div class="titleText">Copiar</div>';
-  startBtnDiv.id = "btnOpenWhatsAllApp";
+  startBtnDiv.innerHTML = '<div class="titleText">Details<br>&<br>Copy</div>';
+  startBtnDiv.id = "btn";
   startBtnDiv.addEventListener("click", function(e) {
     triggerEventOnPage("#main > header > div._18tv-", "click");
 
-    ////////////rola a pagina de contato
+    //////////// scroll contacts
     function pageScroll() {
       document.querySelector("#pane-side").scrollBy(0, 72);
-      // scrolldelay = setTimeout(pageScroll, 100);
     }
     pageScroll();
   });
 
   var style = "";
   style +=
-    "#btnOpenWhatsAllApp { height: 70px; border-radius: 50px; width: 70px; background-color: #43d854;  ";
+    "#btn { height: 59px; width: 59px; background-color: #09d261;  ";
   style +=
-    "position: fixed; top: 15px; left: 15px; z-index: 99999; box-shadow: 0 1px 1px 0 rgba(0,0,0,0.06), 0 2px 5px 0 rgba(0,0,0,0.2);}";
+    "position: fixed; top: 0px; left: 105px; z-index: 99999; }";
   style +=
-    "#btnOpenWhatsAllApp:hover { box-shadow: none; top:16px; cursor: pointer; }";
-  style += "#btnOpenWhatsAllApp.hide { display: none; }";
+    "#btn:hover { left: 100px; background-color: #1cef78; height: 70px; width: 70px; cursor: pointer;}";
   style +=
-    "#btnOpenWhatsAllApp .titleText {text-align: center; font-size: 17px; padding-top: 27px; color: white; }";
+    "#btn .titleText {font-weight: 200; text-align: center; font-size: 14px; padding-top: 10px; color: white;}";
+    style +=
+    "#btn:hover .titleText {font-weight: 500; font-size: 15px;padding-top: 12px;}";
   var styleEl = document.createElement("style");
   styleEl.innerHTML = style;
   body.appendChild(startBtnDiv);

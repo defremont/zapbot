@@ -2,7 +2,7 @@
   "name": "Zap Save Contacts",
   "version": "1.0",
   "description":
-    "This extension enable a button to open the selected contact details and copy name + numer to clipboard in google contacts format for .csv importation.",
+    "This extension enable a button in whatsapp web, that open the selected contact details and copy name + numer to clipboard in google contacts format for .csv importation.",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "content_scripts": [
     {
