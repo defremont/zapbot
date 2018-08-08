@@ -17,15 +17,21 @@ function triggerEventOnPage(selector, eventName, memo) {
   );
   console.log("var nomes " + nomes);
   var nome = [].slice.call(nomes);
-  console.log("var nome " + nome[0].innerText);
-  if (nome[0].innerText !== '') {
+  if (nome[0] !== undefined && nome[0].innerText !== "") {
     //tem nome?
     var nome0 = nome[0].innerText;
     console.log("entrou no 1if " + nome0);
-  } else {    
-    var nome0 = "NOME?";
-    console.log("entrou no else " + nome0);
-    
+  } else {
+    var nomes = document.querySelectorAll(
+      "#app > div > div > div.MZIyP > div._3q4NP._2yeJ5 > span > div > span > div > div > div > div._1CRb5._34vig._3XgGT > span > span"
+    );
+    var nome = [].slice.call(nomes);
+    if (nome[0] !== undefined) {
+      var nome0 = nome[0].innerText;
+    } else {
+      var nome0 = "NOME?";
+      console.log("entrou no else " + nome0);
+    }
   }
   /////////////////////////////////////////////// pegar numeros tel
   var numeros = [];
