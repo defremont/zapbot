@@ -55,9 +55,7 @@ function triggerEventOnPage(selector, eventName, memo) {
       console.log("entrou no else " + numero0);
     }
   }
-  var numeroNome =
-    "BEL02 " +
-    nome0 +
+  var numeroNome = nome0 +
     "\t" +
     "\t" +
     "\t" +
