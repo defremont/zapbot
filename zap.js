@@ -27,9 +27,9 @@ function triggerEventOnPage(selector, eventName, memo) {
     );
     var nome = [].slice.call(nomes);
     if (nome[0] !== undefined) {
-      var nome0 = nome[0].innerText;
+      var nome0 = "NOME? " + nome[0].innerText;
     } else {
-      var nome0 = "NOME?";
+      var nome0 = "null";
       console.log("entrou no else " + nome0);
     }
   }
@@ -55,7 +55,8 @@ function triggerEventOnPage(selector, eventName, memo) {
       console.log("entrou no else " + numero0);
     }
   }
-  var numeroNome = nome0 +
+  var numeroNome =
+    nome0 +
     "\t" +
     "\t" +
     "\t" +
@@ -115,15 +116,13 @@ function addActivateBtn() {
   });
 
   var style = "";
-  style +=
-    "#btn { height: 59px; width: 59px; background-color: #09d261;  ";
-  style +=
-    "position: fixed; top: 0px; left: 105px; z-index: 99999; }";
+  style += "#btn { height: 59px; width: 59px; background-color: #09d261;  ";
+  style += "position: fixed; top: 0px; left: 105px; z-index: 99999; }";
   style +=
     "#btn:hover { left: 100px; background-color: #1cef78; height: 70px; width: 70px; cursor: pointer;}";
   style +=
     "#btn .titleText {font-weight: 200; text-align: center; font-size: 14px; padding-top: 10px; color: white;}";
-    style +=
+  style +=
     "#btn:hover .titleText {font-weight: 500; font-size: 15px;padding-top: 12px;}";
   var styleEl = document.createElement("style");
   styleEl.innerHTML = style;
